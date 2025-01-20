@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LimeWebb Mockup Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br>
+    <div id="mainScene">
+        <a href="index.html"><img src="images/LimeWebb.png"></a>
+        <hr><br>
+        <div id="search">
+            <div id="searchButton" onclick="if(searchBar.textContent != '') setParam('search', encodeURIComponent(searchBar.textContent))">
+                S
+            </div>
+            <div id="searchBar" contenteditable="">Search...</div>
+            <div id="clearButton" onclick="clearSearch()">
+                X
+            </div>
+        </div>
+    </div>
+    <div id="searchScene">
+        <a href="index.html"><img src="images/LimeWebb.png"></a>
+        <hr>
+    </div>
+    <script src="index.js"></script>
+    <script type="text/javascript">
+        const searchBar = document.getElementById('searchBar')
+
+        function clearSearch() {
+            searchBar.textContent = ''
+        }
+
+        function setParam(param='', value='') {
+            const url = new URL(window.location.href)
+            url.searchParams
+                .set(param, value)
+            window.location.href = url
+        }
+    </script>
+</body>
+</html>

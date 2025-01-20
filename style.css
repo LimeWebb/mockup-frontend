@@ -1,0 +1,122 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+img {
+    flex-grow: 1;
+}
+
+body {
+    background-color: rgb(112, 146, 190);
+    width: auto;
+    height: auto;
+}
+
+hr {
+    width: 80vh;
+    border-color: rgba(0, 0, 0, 0.05);
+    border-style: solid;
+}
+
+div[id$="Scene"]:not(.active) {
+    display: none;
+}
+
+div[id$="Scene"].active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: auto;
+}
+
+div[id$="Scene"] h1 {
+    font-weight: 800;
+}
+
+div[id$="Scene"].active #searchBar {
+    color: black;
+    border-style: none;
+    padding: calc(0.1vw + 7.5px);
+    width: calc(0.1vw + 200px);
+    border-radius: 0;
+    background-color: white;
+    align-items: center;
+}
+
+div[id$="Scene"].active #searchButton {
+    margin-right: calc(0.1vw + 10px);
+}
+
+div[id$="Scene"].active #clearButton {
+    margin-left: calc(0.1vw + 10px);
+}
+
+div[id$="Scene"].active div[id$="Button"] {
+    color: black;
+    border-style: none;
+    height: calc(0.1vw + 25px);
+    width: calc(0.1vw + 25px);
+    border-radius: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+}
+
+div[id$="Scene"].active div[id$="Button"]:hover {
+    background-color: #d1d1d1;
+}
+
+.searchResult {
+    background-color: white;
+    border-radius: 10px;
+    height: auto;
+    width: calc(0.1vw + 250px);
+    padding: 15px;
+}
+
+.searchResult * {
+    color: black;
+    margin: 0;
+}
+
+.searchResult .resultTitle {
+    font-weight: 900;
+    font-size: calc(0.5vw + 20px);
+}
+
+.resultWarning {
+    border-radius: calc(0.5vw + 25px);
+}
+
+.errorCode {
+    font-size: calc(2rem + 0.5vw);
+    font-weight: bolder;
+}
+
+.errorDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorDetails * {
+    margin: 0;
+}
+
+.please_wait-text {
+    font-size: calc(0.5vw + 20px);
+}
+
+div[id$="Scene"].active #search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
